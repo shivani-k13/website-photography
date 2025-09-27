@@ -1,46 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>S.O.K Photobooth — Capture the Moment</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOK Photobooth | Capture Your Moments</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-<nav class="nav container">
-<a class="logo" href="#home"><img src="assets/Website Logo.png" alt="S.O.K Photobooth logo"></a>
-<ul class="nav-links">
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-<a class="cta" href="#contact">Book Now</a>
-</nav>
-</header>
 
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="SOK Photobooth Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#book">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-<section id="home" class="hero">
-<div class="hero-inner container">
-<div class="hero-text">
-<h1>Capture Smiles. Create Memories.</h1>
-<p class="lead">Premium photobooth experiences for weddings, birthdays, corporate events and more — tailored to make every moment unforgettable.</p>
-<a class="btn" href="#contact">Get a Quote</a>
-</div>
-<div class="hero-image">
-<img src="assets/IMG-20250703-WA0009.jpg" alt="photobooth sample">
-</div>
-</div>
-</section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Capture Every Moment with SOK Photobooth</h1>
+      <p>Premium Photobooth Experience for Weddings, Birthdays, and Corporate Events.</p>
+      <button id="quoteBtn">Get a Quote</button>
+    </div>
+  </section>
 
+  <!-- Services -->
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <h3>360° Photo Booth</h3>
+        <p>Experience cinematic spins and slow-motion captures like never before!</p>
+      </div>
+      <div class="service-item">
+        <h3>Magic Mirror Booth</h3>
+        <p>Interactive selfie mirror that adds glamour and fun to your event.</p>
+      </div>
+      <div class="service-item">
+        <h3>Customized Frames & Backdrops</h3>
+        <p>Personalize your booth to match your event’s theme and vibe.</p>
+      </div>
+    </div>
+  </section>
 
-<section id="about" class="section about container">
-<div class="about-grid">
-<div>
-<h2>About S.O.K Photobooth</h2>
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="assets/photo1.jpg" alt="Photobooth Sample 1">
+      <img src="assets/photo2.jpg" alt="Photobooth Sample 2">
+      <img src="assets/photo3.jpg" alt="Photobooth Setup">
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="book" class="section">
+    <h2>Book Now</h2>
+    <form id="booking-form">
+      <input type="text" id="bname" placeholder="Full Name" required>
+      <input type="email" id="bemail" placeholder="Email" required>
+      <input type="tel" id="bphone" placeholder="Phone Number" required>
+      <select id="beventType" required>
+        <option value="">Select Event Type</option>
+        <option>Wedding</option>
+        <option>Birthday</option>
+        <option>Corporate</option>
+        <option>Other</option>
+      </select>
+      <input type="date" id="beventDate" required>
+      <input type="text" id="beventLocation" placeholder="Event Location" required>
+      <input type="number" id="bguests" placeholder="Number of Guests" required>
+      <textarea id="bmessage" placeholder="Additional Details"></textarea>
+      <button type="submit">Confirm Booking</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SOK Photobooth | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
