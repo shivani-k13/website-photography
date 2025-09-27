@@ -21,7 +21,6 @@ section {
   background: #111;
 }
 
-
 .navbar ul {
   list-style: none;
   display: flex;
@@ -30,8 +29,6 @@ section {
   padding: 0;
   align-items: center;
 }
-
-
 
 .navbar a {
   text-decoration: none;
@@ -203,4 +200,9 @@ footer {
   color: white;
   padding: 20px 0;
   text-align: center;
+}
+
+/* ✅ Hide sections until clicked */
+.hidden {
+  display: none;
 }

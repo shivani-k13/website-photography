@@ -15,11 +15,11 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#book">Book Now</a></li>
+        <li><a href="#home" data-section="home">Home</a></li>
+        <li><a href="#services" data-section="services">Services</a></li>
+        <li><a href="#gallery" data-section="gallery">Gallery</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+        <li><a href="#book" data-section="book">Book Now</a></li>
       </ul>
     </nav>
   </header>
@@ -68,8 +68,8 @@
     <img class="lightbox-img" src="" alt="Preview">
   </div>
 
-  <!-- Contact Form -->
-  <section id="contact" class="section">
+  <!-- Contact Form (Hidden by default) -->
+  <section id="contact" class="section hidden">
     <h2>Contact Us</h2>
     <form id="contact-form">
       <input type="text" id="name" placeholder="Your Name" required>
@@ -80,8 +80,8 @@
     </form>
   </section>
 
-  <!-- Booking Form -->
-  <section id="book" class="section">
+  <!-- Booking Form (Hidden by default) -->
+  <section id="book" class="section hidden">
     <h2>Book Now</h2>
     <form id="booking-form">
       <input type="text" id="bname" placeholder="Full Name" required>

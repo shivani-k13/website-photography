@@ -1,13 +1,29 @@
 // ✅ Replace with your deployed Google Apps Script Web App URL
 const APPS_SCRIPT_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzj7T7Dm7w5x8u8IuGxmJWHYiewi6rK1f8Pqv3q9MFsmJqRbJUqqJDdD6u72jQaG7MD/exec';
 
-// Smooth Scroll for navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+// Smooth Scroll + Show/Hide sections
+document.querySelectorAll('.navbar a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+
+    const sectionId = this.getAttribute('data-section');
+    const target = document.getElementById(sectionId);
+
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      // Hide all sections marked .section
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.add('hidden');
+      });
+
+      // Always show hero, services, gallery
+      document.getElementById('home').classList.remove('hidden');
+      document.getElementById('services').classList.remove('hidden');
+      document.getElementById('gallery').classList.remove('hidden');
+
+      // Show clicked one
+      target.classList.remove('hidden');
+
+      window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
     }
   });
 });
@@ -18,7 +34,12 @@ if (quoteBtn) {
   quoteBtn.addEventListener('click', function () {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById('home').classList.remove('hidden');
+      document.getElementById('services').classList.remove('hidden');
+      document.getElementById('gallery').classList.remove('hidden');
+      contactSection.classList.remove('hidden');
+      window.scrollTo({ top: contactSection.offsetTop - 70, behavior: 'smooth' });
     }
   });
 }
