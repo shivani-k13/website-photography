@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOK Photobooth | Capture Your Moments</title>
-  <link rel="stylesheet" href="style.css">
+  <title>SK Photobooth | Capture Your Moments</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <img src="assets/logo.png" alt="SOK Photobooth Logo">
+      <img src="assets/logo.png" alt="SK Photobooth Logo">
     </div>
     <nav>
       <ul>
@@ -27,7 +27,7 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1>Capture Every Moment with SOK Photobooth</h1>
+      <h1>Capture Every Moment with SK Photobooth</h1>
       <p>Premium Photobooth Experience for Weddings, Birthdays, and Corporate Events.</p>
       <button id="quoteBtn">Get a Quote</button>
     </div>
@@ -56,11 +56,23 @@
   <section id="gallery" class="section">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="assets/photo1.jpg" alt="Photobooth Sample 1">
-      <img src="assets/photo2.jpg" alt="Photobooth Sample 2">
-      <img src="assets/photo3.jpg" alt="Photobooth Setup">
+      <div class="gallery-item">
+        <img src="assets/photo1.jpg" alt="Photobooth Sample 1">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/photo2.jpg" alt="Photobooth Sample 2">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/photo3.jpg" alt="Photobooth Setup">
+      </div>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="Preview">
+  </div>
 
   <!-- Contact Form -->
   <section id="contact" class="section">
@@ -98,9 +110,9 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 SOK Photobooth | All Rights Reserved</p>
+    <p>© 2025 SK Photobooth | All Rights Reserved</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

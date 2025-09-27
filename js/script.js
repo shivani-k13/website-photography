@@ -1,7 +1,7 @@
 // ✅ Replace with your deployed Google Apps Script Web App URL
 const APPS_SCRIPT_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbzj7T7Dm7w5x8u8IuGxmJWHYiewi6rK1f8Pqv3q9MFsmJqRbJUqqJDdD6u72jQaG7MD/exec';
 
-// ✅ Smooth Scroll for navigation
+// Smooth Scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -12,7 +12,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// ✅ "Get a Quote" button scrolls to Contact section
+// "Get a Quote" button scrolls to Contact section
 const quoteBtn = document.getElementById('quoteBtn');
 if (quoteBtn) {
   quoteBtn.addEventListener('click', function () {
@@ -23,7 +23,7 @@ if (quoteBtn) {
   });
 }
 
-// ✅ CONTACT FORM → Save enquiry to Google Sheet
+// CONTACT FORM → Save enquiry to Google Sheet
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", function(e) {
@@ -49,7 +49,7 @@ if (contactForm) {
   });
 }
 
-// ✅ BOOKING FORM → Send booking email
+// BOOKING FORM → Send booking email
 const bookingForm = document.getElementById("booking-form");
 if (bookingForm) {
   bookingForm.addEventListener("submit", function(e) {
@@ -78,3 +78,25 @@ if (bookingForm) {
     bookingForm.reset();
   });
 }
+
+// ✅ LIGHTBOX FUNCTIONALITY
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.querySelector('.lightbox-img');
+const closeBtn = document.querySelector('.lightbox-close');
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
