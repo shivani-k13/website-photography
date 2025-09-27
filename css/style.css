@@ -1,3 +1,4 @@
+/* General */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -87,7 +88,7 @@ body {
   padding: 20px 0;
 }
 
-.gallery-grid .gallery-item {
+.gallery-item {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -96,15 +97,14 @@ body {
   cursor: pointer;
 }
 
-.gallery-grid .gallery-item:hover {
+.gallery-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.gallery-grid .gallery-item img {
+.gallery-item img {
   width: 100%;
   display: block;
-  border-bottom: 1px solid #eee;
 }
 
 /* Lightbox */
